@@ -1,0 +1,12 @@
+table {
+  table-layout: auto;
+  width: 100%;
+}
+
+tr {
+  outline: thin solid;
+}
+
+td.red {
+  background-color: #da3e3e;
+}

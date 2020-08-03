@@ -1,0 +1,49 @@
+<div>
+
+  <div>
+    <h2>{{ title }}</h2>
+  </div>
+
+  <div>
+    <div>
+      <form (ngSubmit)="search()">
+        <div>
+          <input type="text" id="stoppoint"  [(ngModel)]="stopPointId"  name="Stop Point" required >
+        </div>
+        <div>
+          <button type="submit">Search</button>
+        </div>
+      </form>
+    </div>
+    <br/>
+    <div>
+      Favourite:
+      <div>
+        <ul style="list-style: none;">
+          <li><button class="button" (click)="favourite('490000091G')" label="490000091G">G - Great Portland Street Station</button></li>
+          <li><button class="button" (click)="favourite('490000091H')" label="490000091H">H - Great Portland St Stn / Euston Rd</button></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="stopPointMap">
+    <div class="container">
+      <div class="row">
+          <ng-container *ngFor="let stopPoints of stopPointMap | keyvalue">
+            <div class="col-md-4">
+              <app-stop-point [stopPoints]="stopPoints.value"></app-stop-point>
+
+              <div>
+                <button (click)="remove(stopPoints.key)" label="Remove">Remove</button>
+              </div>
+            </div>
+          </ng-container>
+      </div>
+    </div>
+  </div>
+
+  <router-outlet></router-outlet>
+</div>
+
+

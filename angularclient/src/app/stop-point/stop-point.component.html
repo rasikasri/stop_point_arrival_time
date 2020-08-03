@@ -1,0 +1,28 @@
+
+
+
+  <div *ngFor="let stopPoint of stopPoints">
+  <p-panel>
+    <p-header>
+      <p><b>{{stopPoint.platformName}} - {{stopPoint.stationName}}</b> </p>
+      <p><b>{{stopPoint.towards}}</b> </p>
+    </p-header>
+
+    <div>
+      <table>
+        <thead></thead>
+        <tbody>
+          <tr *ngFor="let arrival of stopPoint.arrivals">
+            <td class="red">{{arrival.lineId}}</td>
+            <td>{{arrival.destinationName}}</td>
+            <td>{{format(arrival.timeToStation)}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p-footer>
+
+    </p-footer>
+  </p-panel>
+  </div>
