@@ -1,0 +1,21 @@
+server:
+  port: 8080
+  compression:
+    enabled: true
+    mime-types: application/json
+
+feign:
+  hystrix:
+    enabled: true
+  client:
+    config:
+      tfl-api:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: BASIC
+
+springfox:
+  documentation:
+    swagger:
+      v2:
+        path: /api-docs

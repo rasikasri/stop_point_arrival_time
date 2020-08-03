@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: stop-point-arrival_time
+  profiles:
+    active: local
+
