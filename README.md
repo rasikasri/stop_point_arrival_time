@@ -21,7 +21,7 @@ Navigate to `http://localhost:8080/` for Swagger UI
 Run following command from the root of the project folder
 
 `stop_point_arrival_time> cd .\angularclient\`  
-`angularclient> npm update` 
+`angularclient> npm update`  
 `angularclient> ng serve` 
 
 Navigate to `http://localhost:4200/`
